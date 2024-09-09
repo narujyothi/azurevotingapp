@@ -1,5 +1,5 @@
 pipeline {
-    agent !{ label 'ansible' }
+    agent !{ label '!ansible' }
     stages {
         stage('Clean Workspace') {
             steps {
