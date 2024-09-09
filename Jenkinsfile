@@ -9,7 +9,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                
-                git url: 'git@github.com:chumaedeogu/example-voting-app.git', branch: 'master'
+                git url: 'https://github.com/chumaedeogu/example-voting-app.git', branch: 'master'
             }
         }
     }
