@@ -1,6 +1,12 @@
 pipeline {
     agent { label '!ansible' }
     stages {
+        stage('Check Environment') {
+            steps {
+                // Print environment variables to check if Docker is in PATH
+                bat 'set'
+            }
+        }
         stage('Clean Workspace') {
             steps {
                 deleteDir() // Deletes the contents of the workspace
