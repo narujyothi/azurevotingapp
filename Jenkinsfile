@@ -12,5 +12,11 @@ pipeline {
                 git url: 'https://github.com/chumaedeogu/example-voting-app.git', branch: 'main'
             }
         }
+        stage('docker compose') {
+            steps {
+               
+                sh 'docker compose up -d'
+            }
+        }
     }
 }
